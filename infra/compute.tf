@@ -19,10 +19,10 @@ resource "google_compute_instance" "default" {
   # Install Flask
   metadata_startup_script = join(" AND ",
     [
-        "sudo apt-get update",
-        "sudo apt-get install -yq build-essential python3-pip git",
-        "pip install flask",
-        "git clone https://github.com/vitorecomp/python-stack",
+        "sudo apt-get update;",
+        "sudo apt-get install -yq build-essential python3-pip git;",
+        "pip install flask;",
+        "git clone https://github.com/vitorecomp/python-stack;",
         "python3 ./python-stack/python-server/app.py"
     ]
   ) 
