@@ -26,7 +26,7 @@ resource "google_compute_firewall" "ssh" {
 
 resource "google_compute_router" "router" {
   name    = "main-router"
-  region  = google_compute_subnetwork.subnet.region
+  region  = google_compute_subnetwork.default.region
   network = google_compute_network.vpc_network.id
 
   bgp {
