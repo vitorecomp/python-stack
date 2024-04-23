@@ -1,4 +1,4 @@
-resource "google_cloud_run_service" "default" {
+resource "google_cloud_run_service" "next_server" {
   name     = "next-server"
   location = "us-west1"
 
@@ -16,7 +16,7 @@ resource "google_cloud_run_service" "default" {
   }
 }
 
-resource "google_cloud_run_service" "default" {
+resource "google_cloud_run_service" "node_server" {
   name     = "node-server"
   location = "us-west1"
 

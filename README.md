@@ -21,10 +21,10 @@ git clone https://github.com/vitorecomp/python-stack
 gcloud artifacts repositories create main-app-image-repo --repository-format=docker --location=us-west1 --description="Main app Image repository"
 
 cd node-server
-gcloud builds submit --region=us-west2 --tag us-west2-docker.pkg.dev/$(gcloud config get-value project)/main-app-image-repo/node-server:latest
+gcloud builds submit --region=us-west1 --tag us-west1-docker.pkg.dev/$(gcloud config get-value project)/main-app-image-repo/node-server:latest
 
 cd ../next-server
-gcloud builds submit --region=us-west2 --tag us-west2-docker.pkg.dev/$(gcloud config get-value project)/main-app-image-repo/next-server:latest
+gcloud builds submit --region=us-west1 --tag us-west1-docker.pkg.dev/$(gcloud config get-value project)/main-app-image-repo/next-server:latest
 
 ```
 
