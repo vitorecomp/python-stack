@@ -4,6 +4,7 @@ resource "google_compute_instance" "default" {
   machine_type = "n2-standard-2"
   zone         = "us-west1-a"
   tags         = ["ssh"]
+  shielded_instance_config = "enable_secure_boot"
 
   boot_disk {
     initialize_params {
@@ -17,8 +18,8 @@ resource "google_compute_instance" "default" {
   network_interface {
     subnetwork = google_compute_subnetwork.default.id
 
-    access_config {
-      # Include this section to give the VM an external IP address
-    }
+    # Include this section to give the VM an external IP address
+    #access_config {
+    #}
   }
 }
